@@ -1,0 +1,134 @@
+[
+    {
+        "id":1,
+        "title":"Veterinary Medicine",
+        "sub_title":"Squid game is a popular Korean 2021 series. It is now the most-watched series on Netflix with billions of streamed hours",
+        "members":[
+            {
+
+                "first_name":" adewale",
+                "last_name":"shoaga"
+            },
+
+            {
+
+                "first_name":" patoka",
+                "last_name":"smadak"
+            },
+
+            {
+
+                "first_name":" sinawa",
+                "last_name":"srafaa"
+            },
+
+            {
+
+                "first_name":" odinga",
+                "last_name":"oralia"
+            }
+            
+    ]
+
+    },
+
+    {
+        "id":1,
+        "title":"Harry Potter",
+        "sub_title": "Harry Potter is an incredible series about mysteries and magic in England from the book Harry Potter.",
+        "members":[
+            {
+
+                "first_name":" samarae",
+                "last_name":"soiss"
+            },
+
+            {
+
+                "first_name":" osineye",
+                "last_name":"gbefunk"
+            },
+
+            {
+
+                "first_name":" omologo",
+                "last_name":"adewale"
+            },
+
+            {
+
+                "first_name":" ayuba",
+                "last_name":"ayinde"
+            }
+            
+    ]
+
+    },
+
+    {
+        "id":1,
+        "title":"Knives out",
+        "sub_title": "Knives Out is an interesting suspense movie about a murder incident involving a famous multi-millionaire author in his home estate.",
+        "members":[
+            {
+
+                "first_name":" ibikunle",
+                "last_name":"amosun"
+            },
+
+            {
+
+                "first_name":" oiaa",
+                "last_name":"woodrik"
+            },
+
+            {
+
+                "first_name":" inikunle",
+                "last_name":"amosun"
+            },
+
+            {
+
+                "first_name":" pelumia",
+                "last_name":"osineye"
+            }
+            
+    ]
+
+    },
+
+    {
+        "id":1,
+        "title":"Ben 10",
+        "sub_title": "Ben 10 is an interesting kids movie about a little boy who found a watch that gave him super-human abilities to transform into many creatures. Ben alongside his grandpa and sister decided to use their new abilities to fight crime.",
+        "members":[
+            {
+
+                "first_name":" ibrahime",
+                "last_name":"adedoyin"
+            },
+
+            {
+
+                "first_name":" obalola",
+                "last_name":"obalana"
+            },
+
+            {
+
+                "first_name":" obaeni",
+                "last_name":"obagbogbo"
+            },
+
+            {
+
+                "first_name":" filefun",
+                "last_name":"ojajajaja"
+            }
+            
+    ]
+
+    }
+
+]

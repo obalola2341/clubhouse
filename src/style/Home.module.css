@@ -1,0 +1,49 @@
+
+.home_continer{
+    
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 3.5em;
+    height: 100%;
+    overflow: auto;
+    
+}
+.action_btn button {
+    background-color: transparent;
+     border: none;
+     margin-left: auto;
+     font-size: 1.3em;
+    
+}
+
+ .action_btn{
+    
+   display: flex;
+   align-items: center;
+   padding: 4em 1.5em 2em 1.5em;
+   position: sticky;
+   bottom: 0%;
+  
+   
+ 
+    
+}
+
+.action_btn  button:first-child {
+   border-radius: 2em;
+   background-color: #28ae61;
+   color: white;
+   padding: 0.3em 1em;
+   font-size: 1.1em;
+   font-weight: 400;
+   display: flex;
+   align-items: center;
+    position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+}
+
+.home_continer .bottomshhet{
+    width: 50px;
+    background-color: #3287b7;
+  }

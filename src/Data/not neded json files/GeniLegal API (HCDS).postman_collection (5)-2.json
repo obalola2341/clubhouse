@@ -1,0 +1,1973 @@
+{
+	"info": {
+		"_postman_id": "831ee0c9-544c-40ac-a65b-a02a1a50985b",
+		"name": "GeniLegal API (HCDS)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7357910"
+	},
+	"item": [
+		{
+			"name": "URL Shortener",
+			"item": [
+				{
+					"name": "Shorten URL",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "account_id",
+									"value": "HDCS01",
+									"type": "text"
+								},
+								{
+									"key": "url",
+									"value": "https://genius.co.uk",
+									"type": "text"
+								},
+								{
+									"key": "lifetime",
+									"value": "18144001",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "apikey",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/postoffice/v1/urlshorten",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"postoffice",
+								"v1",
+								"urlshorten"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Source ID Check",
+			"item": [
+				{
+					"name": "Lookup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apikey",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+									"type": "text"
+								},
+								{
+									"key": "account_id",
+									"value": "HDCS01",
+									"type": "text"
+								},
+								{
+									"key": "source_id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "case_type",
+									"value": "",
+									"description": "int",
+									"type": "text"
+								},
+								{
+									"key": "procedure",
+									"value": "",
+									"description": "int",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/postoffice/v1/out",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"postoffice",
+								"v1",
+								"out"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Status",
+			"item": [
+				{
+					"name": "Status List",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apikey",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+									"type": "text"
+								},
+								{
+									"key": "account_id",
+									"value": "HDCS01",
+									"type": "text"
+								},
+								{
+									"key": "case_type",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "procedure",
+									"value": "61",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/postoffice/v1/status",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"postoffice",
+								"v1",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Status Update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apikey",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+									"type": "text"
+								},
+								{
+									"key": "account_id",
+									"value": "HDCS01",
+									"type": "text"
+								},
+								{
+									"key": "case_type",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "procedure",
+									"value": "61",
+									"type": "text"
+								},
+								{
+									"key": "uid",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "status_id",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/postoffice/v1/updatestatus",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"postoffice",
+								"v1",
+								"updatestatus"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Documents",
+			"item": [
+				{
+					"name": "Document Upload Client URL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "account_id",
+									"value": "HDCS01",
+									"description": "Account ID",
+									"type": "text"
+								},
+								{
+									"key": "apikey",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+									"description": "API Key",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"description": "Document Description",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "",
+									"description": "GeniLegal Client ID",
+									"type": "text"
+								},
+								{
+									"key": "document_date",
+									"value": "2021-02-01",
+									"description": "Document Date",
+									"type": "text"
+								},
+								{
+									"key": "url",
+									"value": "",
+									"description": "Full Valid URL and File (PDF / XLXS / EML)",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/document/v1/inclienturl",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"document",
+								"v1",
+								"inclienturl"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Document Upload URL",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "account_id",
+									"value": "HDCS01",
+									"description": "Account ID",
+									"type": "text"
+								},
+								{
+									"key": "apikey",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+									"description": "API Key",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"description": "Document Description",
+									"type": "text"
+								},
+								{
+									"key": "source_id",
+									"value": "",
+									"description": "COP01/XXXX/XX/XX - reference",
+									"type": "text"
+								},
+								{
+									"key": "document_date",
+									"value": "2020-08-05",
+									"description": "Document Date",
+									"type": "text"
+								},
+								{
+									"key": "url",
+									"value": "",
+									"description": "Full Valid URL and File (PDF / XLXS)",
+									"type": "text"
+								},
+								{
+									"key": "case_type",
+									"value": "",
+									"description": "For Litigation",
+									"type": "text"
+								},
+								{
+									"key": "procedure",
+									"value": "",
+									"description": "For Litigation",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/document/v1/inurl",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"document",
+								"v1",
+								"inurl"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Document Upload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "account_id",
+									"value": "HDCS01",
+									"description": "Account ID",
+									"type": "text"
+								},
+								{
+									"key": "apikey",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+									"description": "API Key",
+									"type": "text"
+								},
+								{
+									"key": "documents[]",
+									"description": "Document as file",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "description",
+									"value": "DSAR Questionnaire",
+									"description": "Document Description",
+									"type": "text"
+								},
+								{
+									"key": "source_id",
+									"value": "",
+									"description": "TT01/XXXX/XX/XX - reference",
+									"type": "text"
+								},
+								{
+									"key": "document_date",
+									"value": "2020-08-05",
+									"description": "Document Date",
+									"type": "text"
+								},
+								{
+									"key": "case_type",
+									"value": "",
+									"description": "int",
+									"type": "text"
+								},
+								{
+									"key": "procedure",
+									"value": "",
+									"description": "int",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/document/v1/in",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"document",
+								"v1",
+								"in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Document Download File",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "apikey",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+									"type": "text"
+								},
+								{
+									"key": "account_id",
+									"value": "HDCS01",
+									"type": "text"
+								},
+								{
+									"key": "uid",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/document/v1/download",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"document",
+								"v1",
+								"download"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Documents",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apikey",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+									"type": "text"
+								},
+								{
+									"key": "account_id",
+									"value": "HDCS01",
+									"type": "text"
+								},
+								{
+									"key": "source_id",
+									"value": "HDCS01/100000/01/01",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "1988-08-02",
+									"description": "YYYY-MM-DD",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/document/v1/list",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"document",
+								"v1",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Documents",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apikey",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+									"type": "text"
+								},
+								{
+									"key": "account_id",
+									"value": "HDCS01",
+									"type": "text"
+								},
+								{
+									"key": "source_id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "timestamp",
+									"value": "23/09/2021 00:00:00 - 23/09/2021 23:59:59",
+									"description": "DD/MM/YYYY H:i:s- DD/MM/YYYY H:i:s",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "case_date",
+									"value": "",
+									"description": "DD/MM/YYYY - DD/MM/YYYY",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "status_date",
+									"value": "",
+									"description": "DD/MM/YYYY - DD/MM/YYYY",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "223,123,123123",
+									"description": "comma separated int e.g. 1,2,3",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "Damages Based Agreement",
+									"description": "string 255 Document Description",
+									"type": "text"
+								},
+								{
+									"key": "case_description",
+									"value": "Barclays",
+									"description": "string 255 Case Description",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "case_status",
+									"value": "",
+									"description": "1 Completed, 0 In Progress,  -1 Cancelled",
+									"type": "text"
+								},
+								{
+									"key": "filename",
+									"value": "",
+									"description": "string 255",
+									"type": "text"
+								},
+								{
+									"key": "page",
+									"value": "0",
+									"description": "int, first page = 0",
+									"type": "text"
+								},
+								{
+									"key": "per-page",
+									"value": "50",
+									"description": "int, max 50",
+									"type": "text"
+								},
+								{
+									"key": "search_phrase",
+									"value": "you acknowledge the need to provide",
+									"description": "string (to search inside PDF)",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/document/v1/search",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"document",
+								"v1",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Lead In",
+			"item": [
+				{
+					"name": "PCP",
+					"item": [
+						{
+							"name": "PCP",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/x-www-form-urlencoded"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "apikey",
+											"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+											"type": "text"
+										},
+										{
+											"key": "account_id",
+											"value": "HDCS01",
+											"type": "text"
+										},
+										{
+											"key": "case_type",
+											"value": "10",
+											"description": "int",
+											"type": "text"
+										},
+										{
+											"key": "procedure",
+											"value": "61",
+											"description": "int",
+											"type": "text"
+										},
+										{
+											"key": "lead_source",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "json-data",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "override",
+											"value": "0",
+											"description": "Set to 1 - if you want to push lead no matter if it already exists or not.",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "https://api-tgg01.genilegal.uk/postoffice/v1/pcp",
+									"protocol": "https",
+									"host": [
+										"api-tgg01",
+										"genilegal",
+										"uk"
+									],
+									"path": [
+										"postoffice",
+										"v1",
+										"pcp"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Invoice / Payment API",
+			"item": [
+				{
+					"name": "Import note",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apikey",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+									"description": "API key",
+									"type": "text"
+								},
+								{
+									"key": "account_id",
+									"value": "HDCS01",
+									"description": "Account Id",
+									"type": "text"
+								},
+								{
+									"key": "case_id",
+									"value": "",
+									"description": "Case Id",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "Note Subject",
+									"description": "Note subject",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Note text",
+									"description": "Note text",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "1605533031",
+									"description": "Optional - timestamp in seconds. If provided, this time will be used as import time, otherwise current time will be specified as import time",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/invoice/v1/note",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"invoice",
+								"v1",
+								"note"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Import email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apikey",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+									"description": "API key",
+									"type": "text"
+								},
+								{
+									"key": "account_id",
+									"value": "HDCS01",
+									"description": "Account Id",
+									"type": "text"
+								},
+								{
+									"key": "case_id",
+									"value": "",
+									"description": "Case Id",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "email",
+									"description": "Comm type, \"email\"",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "Email Subject",
+									"description": "Email subject text",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "eml file content",
+									"description": ".eml file content",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "1605533031",
+									"description": "Optional - timestamp in seconds. If provided, this time will be used as import time, otherwise current time will be specified as import time",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/invoice/v1/comm",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"invoice",
+								"v1",
+								"comm"
+							]
+						},
+						"description": "Import comm"
+					},
+					"response": []
+				},
+				{
+					"name": "Import sms",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apikey",
+									"value": "HDCS01",
+									"description": "API key",
+									"type": "text"
+								},
+								{
+									"key": "account_id",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+									"description": "Account Id",
+									"type": "text"
+								},
+								{
+									"key": "case_id",
+									"value": "",
+									"description": "Case Id",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "sms",
+									"description": "Comm type, \"sms\"",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "SMS Subject",
+									"description": "SMS Subject text",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "SMS text",
+									"description": "SMS Text",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "1605533031",
+									"description": "Optional - timestamp in seconds. If provided, this time will be used as import time, otherwise current time will be specified as import time",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/invoice/v1/comm",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"invoice",
+								"v1",
+								"comm"
+							]
+						},
+						"description": "Import comm"
+					},
+					"response": []
+				},
+				{
+					"name": "Import payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apikey",
+									"value": "HDCS01",
+									"description": "API key",
+									"type": "text"
+								},
+								{
+									"key": "account_id",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+									"description": "Account Id",
+									"type": "text"
+								},
+								{
+									"key": "case_id",
+									"value": "",
+									"description": "Case Id",
+									"type": "text"
+								},
+								{
+									"key": "invoice_no",
+									"value": "",
+									"description": "Invoice number",
+									"type": "text"
+								},
+								{
+									"key": "total_amount_paid",
+									"value": "240.05",
+									"description": "Total amount payed, number with 2 decimals",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "1605533031",
+									"description": "Optional - timestamp in seconds. If provided, this time will be used as import time, otherwise current time will be specified as import time",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/invoice/v1/payment",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"invoice",
+								"v1",
+								"payment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get invoices",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/invoice/v1/invoices?apikey=fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT&account_id=HDCS01&updated_at=2021-01-06 08:00:00&start=0&limit=10",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"invoice",
+								"v1",
+								"invoices"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT"
+								},
+								{
+									"key": "account_id",
+									"value": "HDCS01"
+								},
+								{
+									"key": "updated_at",
+									"value": "2021-01-06 08:00:00",
+									"description": "Format must be `Y-m-d H:i:s`. this param is optional"
+								},
+								{
+									"key": "start",
+									"value": "0",
+									"description": "By default it is set to 0"
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"description": "By default it is set to 100"
+								}
+							]
+						},
+						"description": "Retrive all invoices"
+					},
+					"response": []
+				},
+				{
+					"name": "get invoice",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/invoice/v1/invoices?apikey=fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT&account_id=HDCS01&invoice_no=&updated_at=2021-01-06 08:00:00",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"invoice",
+								"v1",
+								"invoices"
+							],
+							"query": [
+								{
+									"key": "apikey",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT"
+								},
+								{
+									"key": "account_id",
+									"value": "HDCS01"
+								},
+								{
+									"key": "invoice_no",
+									"value": ""
+								},
+								{
+									"key": "updated_at",
+									"value": "2021-01-06 08:00:00",
+									"description": "Format must be `Y-m-d H:i:s`. this param is optional"
+								}
+							]
+						},
+						"description": "Retrive single invoice"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Events",
+			"item": [
+				{
+					"name": "Add Event",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apikey",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+									"description": "API Key provided by Geni to access api",
+									"type": "text"
+								},
+								{
+									"key": "account_id",
+									"value": "HDCS01",
+									"description": "account id",
+									"type": "text"
+								},
+								{
+									"key": "uid",
+									"value": "",
+									"description": "Geni uid of case ",
+									"type": "text"
+								},
+								{
+									"key": "event_type",
+									"value": "2",
+									"description": "Integer based on following list: \n1 => Case Note,\n2 => Case Update,\n3 => Client Update,\n4 => Work Flow,\n5 => Account,\n6 => Document,\n7 => Task,\n8 => Contacts,\n9 => Third Parties,\n10 => Letter,\n11 => Correspondence",
+									"type": "text"
+								},
+								{
+									"key": "action",
+									"value": "Case Details Updated",
+									"description": "String with max length of 255.",
+									"type": "text"
+								},
+								{
+									"key": "data",
+									"value": "{\"Previous Status\":\"D-SAR Request - To Send\",\"Status Description\":\"DSAR Request - Sent\",\"SMS Text\":\"Dear Mr Adam Laskey. Your free no obligation check for undisclosed commission’s (plevin ppi) in relation to your YBS Mortgage account has been submitted to the lender. This can take up to 90 days but does normally come back a lot sooner we will keep you informed with Text’s or Emails throughout the process. If you have any questions or queries, please do not hesitate to call us on 0161 518 0980 or alternatively email us at, info@legalukservices.com Thank you Legal UK Services Ltd.\",\"Email Text\":null,\"Status Last Updated\":\"13/10/2020, 16:31\"}",
+									"description": "json object. Shouldn't be empty.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/postoffice/v1/event",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"postoffice",
+								"v1",
+								"event"
+							]
+						},
+						"description": "Sent request to add event."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TU",
+			"item": [
+				{
+					"name": "Transunion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "account_id",
+									"value": "HDCS01",
+									"description": "Account ID",
+									"type": "text"
+								},
+								{
+									"key": "apikey",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+									"description": "API Key",
+									"type": "text"
+								},
+								{
+									"key": "source_id",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "date_of_birth",
+									"value": "",
+									"description": "YYYY-MM-DD",
+									"type": "text"
+								},
+								{
+									"key": "retrieve",
+									"value": "0",
+									"description": "0 or 1",
+									"type": "text"
+								},
+								{
+									"key": "test_mode",
+									"value": "0",
+									"description": "0 or 1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/postoffice/v1/transunion",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"postoffice",
+								"v1",
+								"transunion"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "Add Client Note",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apikey",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+									"description": "API key",
+									"type": "text"
+								},
+								{
+									"key": "account_id",
+									"value": "HDCS01",
+									"description": "Account Id",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "",
+									"description": "Client Id",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Note text",
+									"description": "Note text",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "1605533031",
+									"description": "Optional - timestamp in seconds. If provided, this time will be used as import time, otherwise current time will be specified as import time",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/client/v1/note",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"client",
+								"v1",
+								"note"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Clients",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apikey",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+									"type": "text"
+								},
+								{
+									"key": "account_id",
+									"value": "HDCS01",
+									"type": "text"
+								},
+								{
+									"key": "case_type",
+									"value": "10",
+									"description": "int, max length 11 filter on linked cases",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "procedure",
+									"value": "47",
+									"description": "int, max length 11 filter on linked cases",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "0",
+									"description": "int, first page = 0",
+									"type": "text"
+								},
+								{
+									"key": "per-page",
+									"value": "10",
+									"description": "int, max number 50",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "",
+									"description": "comma separated string e.g Dame, Dr, Lday, Laird, Lord, Moss, Mr. Mrs, Ms, Prof, Rev, Sir",
+									"type": "text"
+								},
+								{
+									"key": "firstname",
+									"value": "Test",
+									"description": "string 50 Firstname * Required",
+									"type": "text"
+								},
+								{
+									"key": "surname",
+									"value": "Client",
+									"description": "string 50 Surname * Required",
+									"type": "text"
+								},
+								{
+									"key": "previous_name",
+									"value": "",
+									"description": "string 50 Previous Name",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "",
+									"description": "DD/MM/YYYY - DD/MM/YYYY",
+									"type": "text"
+								},
+								{
+									"key": "marital_status",
+									"value": "",
+									"description": "comma separated string e.g. Single, Married, Divorced, Separated, Widowed",
+									"type": "text"
+								},
+								{
+									"key": "national_insurance",
+									"value": "",
+									"description": "string 50 National Insurance Number",
+									"type": "text"
+								},
+								{
+									"key": "address_1",
+									"value": "",
+									"description": "string 150 Address 1",
+									"type": "text"
+								},
+								{
+									"key": "address_2",
+									"value": "",
+									"description": "string 150 Address 2",
+									"type": "text"
+								},
+								{
+									"key": "town",
+									"value": "",
+									"description": "string 150 Town",
+									"type": "text"
+								},
+								{
+									"key": "county",
+									"value": "",
+									"description": "string 150 County",
+									"type": "text"
+								},
+								{
+									"key": "postcode",
+									"value": "",
+									"description": "string 150 Postcode",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "",
+									"description": "string 150 Country",
+									"type": "text"
+								},
+								{
+									"key": "nationality",
+									"value": "",
+									"description": "string 50 Nationality",
+									"type": "text"
+								},
+								{
+									"key": "passport_no",
+									"value": "",
+									"description": "string 50 Passport Number",
+									"type": "text"
+								},
+								{
+									"key": "email_address",
+									"value": "",
+									"description": "string 150 Email Address",
+									"type": "text"
+								},
+								{
+									"key": "telephone_no",
+									"value": "",
+									"description": "string 50 Telephone Number",
+									"type": "text"
+								},
+								{
+									"key": "mobile_no",
+									"value": "",
+									"description": "string 50 Mobile Number",
+									"type": "text"
+								},
+								{
+									"key": "work_tel",
+									"value": "",
+									"description": "string 50 Work Telephone",
+									"type": "text"
+								},
+								{
+									"key": "verified",
+									"value": "",
+									"description": "string \"yes\" or \"no\"",
+									"type": "text"
+								},
+								{
+									"key": "duplicate",
+									"value": "",
+									"description": "int, 2 duplicate, 1 not duplicate",
+									"type": "text"
+								},
+								{
+									"key": "cancelled",
+									"value": "",
+									"description": "string \"yes\" or \"no\"",
+									"type": "text"
+								},
+								{
+									"key": "deceased",
+									"value": "",
+									"description": "string \"yes\" or \"no\"",
+									"type": "text"
+								},
+								{
+									"key": "vulnerable",
+									"value": "",
+									"description": "string \"yes\" or \"no\"",
+									"type": "text"
+								},
+								{
+									"key": "portalUser",
+									"value": "",
+									"description": "string \"yes\" or \"no\"",
+									"type": "text"
+								},
+								{
+									"key": "quill_id",
+									"value": "",
+									"description": "string 15 Quill ID",
+									"type": "text"
+								},
+								{
+									"key": "complaintStatus",
+									"value": "",
+									"description": "int, 0 N/A, 1 In Progress, 2 With Management, 3 Resolved",
+									"type": "text"
+								},
+								{
+									"key": "created_at",
+									"value": "24/11/2021 - 24/11/2021",
+									"description": "DD/MM/YYYY - DD/MM/YYYY",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "updated_at",
+									"value": "24/11/2021 - 24/11/2021",
+									"description": "DD/MM/YYYY - DD/MM/YYYY",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "ip_address",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/client/v1/search",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"client",
+								"v1",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apikey",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+									"description": "API key",
+									"type": "text"
+								},
+								{
+									"key": "account_id",
+									"value": "HDCS01",
+									"description": "Account Id",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "",
+									"description": "Client ID",
+									"type": "text"
+								},
+								{
+									"key": "updates",
+									"value": "{\"title\":\"Mr\",\"firstname\":\"Test\", \"previous_addresses\": [\"20 Kestrel Avenue, Hull, HU7 4SX\",\"3 Westbury Court, Hull, HU7 3NB\"]}",
+									"description": "JSON Key Pair required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/client/v1/update",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"client",
+								"v1",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cases",
+			"item": [
+				{
+					"name": "Add Case Note",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apikey",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+									"description": "API key",
+									"type": "text"
+								},
+								{
+									"key": "account_id",
+									"value": "HDCS01",
+									"description": "Account Id",
+									"type": "text"
+								},
+								{
+									"key": "uid",
+									"value": "",
+									"description": "uid",
+									"type": "text"
+								},
+								{
+									"key": "subject",
+									"value": "Note Subject",
+									"description": "Note subject",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "Note text",
+									"description": "Note text",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "1605533031",
+									"description": "Optional - timestamp in seconds. If provided, this time will be used as import time, otherwise current time will be specified as import time",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/cases/v1/note",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"cases",
+								"v1",
+								"note"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Cases",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apikey",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+									"type": "text"
+								},
+								{
+									"key": "account_id",
+									"value": "HDCS01",
+									"type": "text"
+								},
+								{
+									"key": "case_type",
+									"value": "10",
+									"description": "int, max length 11 - required",
+									"type": "text"
+								},
+								{
+									"key": "procedure",
+									"value": "61",
+									"description": "int, max length 11 - required",
+									"type": "text"
+								},
+								{
+									"key": "source_id",
+									"value": "HDCS01/11346/16/%",
+									"type": "text"
+								},
+								{
+									"key": "case_date",
+									"value": "24/11/2021 - 24/11/2021",
+									"description": "DD/MM/YYYY - DD/MM/YYYY",
+									"type": "text"
+								},
+								{
+									"key": "status_date",
+									"value": "24/11/2021 - 24/11/2021",
+									"description": "DD/MM/YYYY - DD/MM/YYYY",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "",
+									"description": "comma separated int e.g. 1,2,3 - required",
+									"type": "text"
+								},
+								{
+									"key": "case_description",
+									"value": "",
+									"description": "string 255 Case Description",
+									"type": "text"
+								},
+								{
+									"key": "case_status",
+									"value": "0",
+									"description": "2 Completed, 0 In Progress,  -1 Cancelled",
+									"type": "text"
+								},
+								{
+									"key": "page",
+									"value": "0",
+									"description": "int, first page = 0",
+									"type": "text"
+								},
+								{
+									"key": "per-page",
+									"value": "10",
+									"description": "int, max number 50",
+									"type": "text"
+								},
+								{
+									"key": "attributes",
+									"value": "{\"2\": \"123456\"}",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/cases/v1/search",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"cases",
+								"v1",
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Case",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apikey",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+									"type": "text"
+								},
+								{
+									"key": "account_id",
+									"value": "HDCS01",
+									"type": "text"
+								},
+								{
+									"key": "uid",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "updates",
+									"value": "{\"case_reference\":\"A2222BB\",  \"cheque_amount_received\":\"21235\", \"fee_amount\":\"123\", \"refund_amount\":\"1223\"}",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "custom_fields",
+									"value": "{\"date_of_final_response\":\"YYYY-MM-DD\"}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/cases/v1/update",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"cases",
+								"v1",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Copy Case",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "apikey",
+									"value": "fn1Ka3ztVaSSUbwjEfdoCWH9TuLhMF5Xk8PiLUIT",
+									"description": "API key",
+									"type": "text"
+								},
+								{
+									"key": "account_id",
+									"value": "HDCS01",
+									"description": "Account Id",
+									"type": "text"
+								},
+								{
+									"key": "uid",
+									"value": "",
+									"description": "uid (source)",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "",
+									"description": "Status ID",
+									"type": "text"
+								},
+								{
+									"key": "documents",
+									"value": "[\"Finance Agreement\", \"Form of Authority\"]",
+									"description": "Document List to allocate from source (JSON single dimension) Optional",
+									"type": "text"
+								},
+								{
+									"key": "overrides",
+									"value": "{\"policy_no\":\"ABCXYZ\"}",
+									"description": "Optional - JSON Key Pair required",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "custom_fields",
+									"value": "{\"agreement_number\":\"113\",\"key\":\"value\"}",
+									"description": "Optional - JSON Key Pair required",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api-tgg01.genilegal.uk/cases/v1/copy",
+							"protocol": "https",
+							"host": [
+								"api-tgg01",
+								"genilegal",
+								"uk"
+							],
+							"path": [
+								"cases",
+								"v1",
+								"copy"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
